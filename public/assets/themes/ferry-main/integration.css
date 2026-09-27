@@ -1,0 +1,105 @@
+/* Bind ferry-re's original components to Ferry's existing actions and API. */
+body[data-theme="template-6"] {background:var(--bg-body);color:var(--text-main);font-family:var(--font);font-size:14px}
+body[data-theme="template-6"] [hidden]{display:none!important}
+body[data-theme="template-6"] .app-header{position:sticky;top:0;z-index:100}
+/* Keep account/cart popovers above the sibling catalogue navigation layer. */
+body[data-theme="template-6"] .app-header .header-inner{position:relative;z-index:20;display:flex;align-items:center;overflow:visible}
+body[data-theme="template-6"] .app-header .store-mega-menu{z-index:10}
+body[data-theme="template-6"] .app-header .logo img{max-height:42px}
+body[data-theme="template-6"] .app-header .search-bar{position:relative}
+body[data-theme="template-6"] .app-header .search-submit{position:static;display:flex;align-items:center;justify-content:center}
+body[data-theme="template-6"] .app-header #search-input{width:100%;box-shadow:none}
+body[data-theme="template-6"] .app-header .user-nav{display:flex;align-items:center}
+body[data-theme="template-6"] .extras-menu{display:flex;list-style:none;gap:14px;align-items:center;margin:0;padding:0;flex:0 0 auto}
+body[data-theme="template-6"] .extras-menu>li{position:relative;margin:0}
+body[data-theme="template-6"] .extras-menu>li>a {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    padding: 0;
+    color: var(--text);
+    border-radius: 50%;
+    transition: transform .2s, color .2s, background .2s, border-color .2s, box-shadow .2s;
+}
+body[data-theme="template-6"] .extras-menu>li>a:hover{color:#fff;background:var(--primary);border-color:var(--primary);transform:translateY(-2px);box-shadow:0 8px 18px rgba(72,135,244,.30)}
+body[data-theme="template-6"] .extras-menu .extra-icon{display:flex;align-items:center;justify-content:center;border:0;box-shadow:none;background:none}
+body[data-theme="template-6"].fm-signed-in .fm-register{display:none}
+body[data-theme="template-6"] .app-header .user-nav .fm-register{padding-inline:22px;white-space:nowrap}
+body[data-theme="template-6"] .app-header .fm-register:hover{color:#163a68}
+body[data-theme="template-6"] .ferry-announcement{flex:none}
+body[data-theme="template-6"] .ferry-announcement__messages{width:100%;font-size:12px}
+body[data-theme="template-6"] .store-mega-menu>.container{position:relative}
+body[data-theme="template-6"] .b2b-dropdown-overlay{display:block;max-height:70vh;overflow:auto}
+body[data-theme="template-6"] .b2b-dropdown-overlay[hidden]{display:none!important}
+body[data-theme="template-6"] .b2b-mega-families{display:flex;gap:8px}
+body[data-theme="template-6"] .b2b-family-btn{width:auto;flex:none;text-align:center}
+body[data-theme="template-6"] .b2b-family-btn.active{background:#edf5ff;color:#2878ed;border-color:#9fc3f3}
+body[data-theme="template-6"] .b2b-models-grid{display:block}
+body[data-theme="template-6"] .fm-catalog-page{padding-top:0;padding-bottom:40px}
+body[data-theme="template-6"] .fm-catalog-page .catalog-layout{margin-top:12px}
+body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar{position:sticky;top:135px;max-height:calc(100dvh - 148px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#9aa5b5 transparent}
+body[data-theme="template-6"] .fm-catalog-page .catalog-main{min-width:0}
+body[data-theme="template-6"] .quick-category{cursor:pointer;font-family:inherit;text-align:left}
+body[data-theme="template-6"] .quick-category-thumb img{width:100%;height:100%;object-fit:contain}
+body[data-theme="template-6"] .fm-catalog-products{display:block}
+body[data-theme="template-6"] .b2b-products{width:100%;overflow-x:auto}
+body[data-theme="template-6"] .b2b-table{margin:0;width:100%}
+body[data-theme="template-6"] .b2b-table .b2b-img-wrap img{max-height:64px}
+body[data-theme="template-6"] .fm-results-tools{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:0 0 12px;font-size:12px}
+body[data-theme="template-6"] .fm-results-tools #result-count{margin-right:auto}
+body[data-theme="template-6"] .fm-results-tools select{width:auto;max-width:170px;min-height:32px;font-size:12px;padding:4px 10px}
+body[data-theme="template-6"] .fm-results-tools .view-btn{padding:5px 10px;font-size:12px}
+body[data-theme="template-6"] .catalog-sidebar .catalog-desktop-filters{padding:16px 14px;border-top:1px solid #e2e6ee}
+body[data-theme="template-6"] .catalog-sidebar .field select{width:100%;max-width:100%;padding:9px;border:1px solid #dce2eb;border-radius:6px;background:#fff}
+body[data-theme="template-6"] .catalog-sidebar .field{margin-block:12px}
+body[data-theme="template-6"] .catalog-sidebar .field label{display:block;font-size:12px;margin-bottom:5px}
+body[data-theme="template-6"] .catalog-sidebar .check-label{display:flex;gap:7px;align-items:center;padding-block:12px}
+body[data-theme="template-6"] .catalog-smart-form{width:100%}
+body[data-theme="template-6"] .search-results{position:absolute;top:calc(100% + 10px);right:0;left:auto;width:min(800px,90vw);max-height:65vh;overflow:auto}
+body[data-theme="template-6"] .search-results.open{display:block}
+body[data-theme="template-6"] .ferry-main-footer{margin-top:30px;background:#fff;color:var(--text-main)}
+body[data-theme="template-6"] .ferry-main-footer .footer-widgets{display:grid}
+body[data-theme="template-6"] .ferry-main-footer .footer-logo{width:180px;filter:none}
+body[data-theme="template-6"] .mini-cart-content,body[data-theme="template-6"] .account-menu{z-index:140}
+body[data-theme="template-6"] #app{min-height:50vh}
+body[data-theme="template-6"] .sr-only{position:absolute!important;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body[data-theme="template-6"] .lp-lead,body[data-theme="template-6"] .lp-search-hint{color:#64748b}
+body[data-theme="template-6"] .b2b-table td{padding-block:8px}
+body[data-theme="template-6"] .b2b-table .col-price{width:140px;white-space:nowrap}
+body[data-theme="template-6"] .b2b-table .col-order{width:150px;white-space:nowrap}
+body[data-theme="template-6"] .fm-search-popout{position:fixed!important;z-index:500;display:block;overflow:auto;background:#fff;border:1px solid #bdd0e8;border-radius:12px;box-shadow:0 20px 60px #18314d33}
+body[data-theme="template-6"] .fm-search-popout .suggestion-group-title{position:sticky;top:0;z-index:1;background:#fff}
+body[data-theme="template-6"] .fm-search-popout input{max-width:65px}
+body[data-theme="template-6"] .ferry-main-home{max-width:1232px;margin:0 auto;padding-inline:16px}
+@media(min-width:901px){body[data-theme="template-6"] .fm-catalog-page .catalog-layout{grid-template-columns:256px minmax(0,1fr);gap:18px}}
+@media(max-width:900px){
+ body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar{position:static;max-height:420px}
+ body[data-theme="template-6"] .fm-catalog-page .catalog-layout{display:grid;grid-template-columns:1fr}
+ body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar .quick-categories{display:flex;flex-wrap:nowrap;overflow:auto;max-height:110px}
+ body[data-theme="template-6"] .fm-catalog-page .quick-category{flex:0 0 120px}
+ body[data-theme="template-6"] .catalog-desktop-filters{display:none}
+ body[data-theme="template-6"] .fm-filters-open .catalog-desktop-filters{display:block}
+ body[data-theme="template-6"] .fm-catalog-products .b2b-table{min-width:0}
+ body[data-theme="template-6"] .fm-results-tools{flex-wrap:wrap}
+}
+@media(max-width:540px){
+ body[data-theme="template-6"] .fm-catalog-products .b2b-row{display:grid;grid-template-columns:56px minmax(0,1fr);gap:8px 12px;padding:14px}
+ body[data-theme="template-6"] .fm-catalog-products .b2b-row td{position:static;min-width:0;width:auto!important;padding:0!important;margin:0;border:0;white-space:normal}
+ body[data-theme="template-6"] .fm-catalog-products .b2b-row .col-img{grid-column:1;grid-row:1 / span 4}
+ body[data-theme="template-6"] .fm-catalog-products .b2b-row td:not(.col-img){grid-column:2}
+ body[data-theme="template-6"] .fm-catalog-products .b2b-prod-title{overflow-wrap:anywhere}
+ body[data-theme="template-6"] .app-header .header-inner{display:flex;flex-wrap:wrap;padding:10px 14px;gap:10px}
+ body[data-theme="template-6"] .app-header .logo{flex:1 1 auto}
+ body[data-theme="template-6"] .page-search-jump{order:3;margin:0;width:100%}
+ body[data-theme="template-6"] .app-header .user-nav{margin:0}
+ body[data-theme="template-6"] .app-header .user-nav .fm-register{padding:0 10px;font-size:11px;min-width:0}
+ body[data-theme="template-6"] .app-header .user-nav .nav-text{position:static;width:auto;height:auto;clip:auto;font-size:11px}
+ body[data-theme="template-6"] .b2b-mega-layout{display:grid;grid-template-columns:105px minmax(0,1fr)}
+ body[data-theme="template-6"] .b2b-mega-models{display:block;min-width:0}
+ body[data-theme="template-6"] .b2b-model-links{grid-template-columns:1fr}
+}

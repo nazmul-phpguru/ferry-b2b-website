@@ -45,4 +45,3 @@ Webhooks: imported records can be viewed and edited; order, product, customer, a
 ## Data protection
 
 `config.php` and `storage/` are excluded from version control. Production data includes customer and order information; keep exports and media in private storage. Revoke the shared cPanel API token when the transfer is complete.
-

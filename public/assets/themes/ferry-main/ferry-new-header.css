@@ -1,0 +1,152 @@
+/* Premium storefront header. This file intentionally loads last so the shell
+   has one authoritative header treatment across storefront routes. */
+body:not(:has(.admin-shell)) .ferry-announcement {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 6px clamp(16px, 4vw, 48px);
+    background: linear-gradient(90deg, #0b1220 0%, #132743 52%, #0b1220 100%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 650;
+    letter-spacing: 0;
+    text-transform: none;
+}
+body:not(:has(.admin-shell)) .ferry-announcement__messages { display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; }
+.ferry-announcement__messages > span + span:not(.ferry-preview-badge)::before { content:"|"; margin-right:18px; opacity:.55; }
+.ferry-preview-badge { padding:3px 8px; border:1px solid rgba(255,255,255,.55); border-radius:999px; font-size:10px; text-transform:uppercase; letter-spacing:.06em; }
+.ferry-announcement .language-control { margin-left:auto; color:#fff; }
+.ferry-announcement .language-control select { color:#fff; background:transparent; border-color:rgba(255,255,255,.45); }
+.ferry-announcement .language-control svg { color:#fff; stroke:currentColor; }
+
+body:not(:has(.admin-shell)) .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #e7edf5;
+    box-shadow: 0 8px 30px rgba(15, 33, 57, .07);
+}
+body:not(:has(.admin-shell)) .app-header .header-inner {
+    min-height: 80px;
+    height: auto;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    gap: clamp(14px, 2vw, 24px);
+}
+body:not(:has(.admin-shell)) .app-header .logo {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 clamp(175px, 17vw, 218px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    color: #0d2747;
+    text-decoration: none;
+}
+body:not(:has(.admin-shell)) .app-header .logo img { display:block; width:auto; max-width:100%; height:clamp(34px, 4vw, 42px); object-fit:contain; }
+.app-header .page-search-jump { display:none; }
+.app-header .search-bar { flex:1 1 auto; max-width:none; min-width:260px; }
+body:not(:has(.admin-shell)) .app-header .search-input-wrapper {
+    min-height: 50px;
+    padding: 0 2px 0 12px;
+    overflow: hidden;
+    border: 1px solid #d7e0eb;
+    border-radius: 999px;
+    background:#fff;
+    box-shadow:0 3px 12px rgba(20,40,68,.06), inset 0 1px 0 #fff;
+}
+body:not(:has(.admin-shell)) .app-header .search-input-wrapper:hover { border-color:#b9c8da; box-shadow:0 5px 16px rgba(20,40,68,.09); }
+body:not(:has(.admin-shell)) .app-header .search-input-wrapper:focus-within { border-color:#2878ed; box-shadow:0 0 0 4px rgba(40,120,237,.13), 0 6px 18px rgba(20,55,100,.09); }
+.app-header #search-input { min-height:48px; padding:0 8px; font-size:14px; }
+.app-header .search-icon { color:#72798a; }
+body:not(:has(.admin-shell)) .app-header .search-submit {
+    align-self:stretch;
+    min-width:96px;
+    margin:2px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#347ff0,#1463d6);
+    color:#fff;
+}
+body:not(:has(.admin-shell)) .app-header .search-submit:hover { background:linear-gradient(135deg,#236fe2,#0c54bd); box-shadow:0 5px 13px rgba(33,105,218,.25); }
+.app-header .user-nav { gap:6px; flex:0 0 auto; }
+.app-header .user-nav .nav-link,
+.app-header .user-nav > a,
+.app-header .user-nav > button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:44px;
+    height:44px;
+    padding:0 10px;
+    border:1px solid #dddfe6;
+    border-radius:12px;
+    background:#f6f7f9;
+    color:#202431;
+    transition:transform .2s, color .2s, background .2s, border-color .2s, box-shadow .2s;
+}
+.app-header .user-nav .nav-link:hover,
+.app-header .user-nav > a:hover,
+.app-header .user-nav > button:hover {
+    color:#fff;
+    background:#4887f4;
+    border-color:#4887f4;
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(72,135,244,.3);
+}
+.app-header .user-nav .nav-text { font-size:12px; font-weight:700; }
+.app-header .cart-badge { background:#fc0909; box-shadow:0 0 0 2px #fff; }
+
+body:not(:has(.admin-shell)) .app-header .store-menu,
+body:not(:has(.admin-shell)) .app-header .store-mega-menu {
+    min-height:54px;
+    border-top:1px solid #dddfe6;
+    border-bottom:1px solid #edf0f4;
+    background:linear-gradient(180deg,#f8fbff 0%,#f3f7fc 100%);
+}
+.app-header .store-menu a { color:#202431; font-size:14px; font-weight:600; }
+.app-header .store-menu a:hover,
+.app-header .store-menu a[aria-current="page"] { color:#4887f4; }
+
+@media (max-width: 820px) {
+    .ferry-announcement__messages span:nth-child(2),
+    .ferry-announcement__messages span:nth-child(3) { display:none; }
+    .ferry-announcement__messages > span + span::before { display:none; }
+    .app-header .header-inner { flex-wrap:wrap; padding-top:10px; padding-bottom:10px; }
+    body:not(:has(.admin-shell)) .app-header .logo { flex:1 1 auto; }
+    .app-header .user-nav { margin-left:auto; }
+    .app-header .search-bar { order:3; flex:0 0 100%; max-width:100%; min-width:0; }
+}
+@media (max-width: 540px) {
+    .ferry-announcement { justify-content:space-between; gap:8px; padding-inline:12px; }
+    .ferry-preview-badge { display:none; }
+    body:not(:has(.admin-shell)) .app-header .header-inner {
+        grid-template-columns: minmax(92px, 1fr) auto;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    body:not(:has(.admin-shell)) .app-header .logo { min-width: 0; }
+    body:not(:has(.admin-shell)) .app-header .logo img { width:112px; max-width:100%; height:auto; }
+    body:not(:has(.admin-shell)) .app-header .user-nav { min-width:0; gap:3px; }
+    body:not(:has(.admin-shell)) .app-header .user-nav .nav-signin {
+        width:40px;
+        min-width:40px;
+        padding:0;
+        font-size:0;
+    }
+    body:not(:has(.admin-shell)) .app-header .user-nav .nav-signin svg { width:19px; height:19px; }
+    body:not(:has(.admin-shell)) .app-header .user-nav .btn-primary {
+        max-width:112px;
+        padding:0 11px;
+        overflow:hidden;
+        font-size:11px;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+    }
+    .app-header .search-submit { min-width:48px; font-size:0; }
+    .app-header .search-submit::after { content:"⌕"; font-size:22px; }
+    .app-header .user-nav .nav-text { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+}

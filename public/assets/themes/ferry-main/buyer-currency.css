@@ -1,0 +1,4 @@
+/* Currency notice shown with cart and checkout totals. The delivery country is
+   set on the address, not in the header, so there is no picker to style. */
+.currency-context-note { font-size: .8rem; color: var(--text-muted); margin-top: .65rem; }
+.currency-context-note.error { color: var(--danger, #b42318); }

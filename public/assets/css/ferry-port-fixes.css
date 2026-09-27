@@ -1,0 +1,93 @@
+/* Complete the ferry-main header rules absent from the local theme bundle. */
+body[data-theme="template-6"] .app-header .header-inner{max-width:1240px;margin:auto;display:flex;align-items:center;gap:24px;min-height:78px;padding:10px 20px}
+body[data-theme="template-6"] .app-header .logo{display:flex;align-items:center;flex:0 0 210px;min-width:0}
+body[data-theme="template-6"] .app-header .logo img{display:block;width:205px;max-width:100%;height:auto;max-height:52px;object-fit:contain}
+body[data-theme="template-6"] .app-header .search-bar{flex:1;min-width:180px}
+body[data-theme="template-6"] .app-header .ferry-main-search-form{display:block;margin:0}
+body[data-theme="template-6"] .app-header .search-input-wrapper{display:flex;align-items:center;gap:9px;height:48px;padding:3px 4px 3px 17px;border:1px solid #d5dfed;border-radius:999px;box-shadow:0 4px 15px #1433510d}
+body[data-theme="template-6"] .app-header .search-input-wrapper input{flex:1;min-width:0;height:40px;border:0;outline:0;background:transparent;font-size:14px}
+body[data-theme="template-6"] .app-header .search-submit{height:40px;min-width:94px;border:0;border-radius:999px;padding:0 17px;background:#2676e9;color:#fff;font-weight:650;white-space:nowrap}
+body[data-theme="template-6"] .app-header .search-icon{display:flex;align-items:center;flex:none}
+body[data-theme="template-6"] .app-header .user-nav{display:flex;align-items:center;gap:13px;white-space:nowrap}
+body[data-theme="template-6"] .app-header .extras-menu{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none}
+body[data-theme="template-6"] .app-header .extras-menu>li{position:relative;list-style:none}
+body[data-theme="template-6"] .app-header .extras-menu>li>a{display:flex;align-items:center;justify-content:center;padding:8px;border:1px solid #e4eaf1;border-radius:50%;color:#28405a;text-decoration:none;background:#fff}
+body[data-theme="template-6"] .app-header .fm-register{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 18px;border:1px solid #e4eaf1;border-radius:10px;color:#1e3852;text-decoration:none;font-size:13px;font-weight:650;background:#f7f9fc}
+body[data-theme="template-6"] .store-mega-menu{min-height:49px;background:#f5f8fc;border-top:1px solid #e5eaf1;border-bottom:1px solid #e5eaf1}
+body[data-theme="template-6"] .store-mega-menu>.container{max-width:1240px;margin:auto;padding:0 20px}
+body[data-theme="template-6"] .b2b-top-nav{display:flex;align-items:center;gap:5px;list-style:none;margin:0;padding:0;min-height:48px}
+body[data-theme="template-6"] .b2b-nav-item{position:relative;list-style:none}
+body[data-theme="template-6"] .b2b-nav-link{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:6px 14px;border:0;border-radius:7px;background:transparent;color:#27425e;text-decoration:none;font:600 13px system-ui,sans-serif;cursor:pointer}
+body[data-theme="template-6"] .b2b-nav-link:hover,body[data-theme="template-6"] .b2b-nav-item.open>.b2b-nav-link{background:#e5efff;color:#1565ca}
+body[data-theme="template-6"] .b2b-mobile-toggle{display:none}
+body[data-theme="template-6"] .b2b-dropdown-overlay{position:absolute;top:100%;left:0;z-index:100;width:min(750px,calc(100vw - 40px));background:#fff;border:1px solid #dbe5ef;border-radius:12px;box-shadow:0 20px 55px #142e4d24;padding:20px}
+body[data-theme="template-6"] .b2b-dropdown-overlay[hidden]{display:none}
+body[data-theme="template-6"] .b2b-mega-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:20px;min-height:250px}
+body[data-theme="template-6"] .b2b-mega-families{display:flex;flex-direction:column;align-items:stretch;gap:6px;padding-right:14px;border-right:1px solid #e6edf5}
+body[data-theme="template-6"] .b2b-family-btn{display:block;width:100%;padding:10px 12px;border:1px solid transparent;border-radius:8px;background:transparent;color:#2a4662;text-align:left;font:600 13px system-ui,sans-serif;cursor:pointer}
+body[data-theme="template-6"] .b2b-family-btn:hover,body[data-theme="template-6"] .b2b-family-btn.active{border-color:#c5dbf6;background:#edf5ff;color:#1769c9}
+body[data-theme="template-6"] .b2b-mega-models{min-width:0}
+body[data-theme="template-6"] .b2b-mega-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;color:#17344f;font-weight:750;font-size:17px;margin-bottom:14px}
+body[data-theme="template-6"] .b2b-mega-heading span{display:flex;flex-direction:column;gap:3px}
+body[data-theme="template-6"] .b2b-mega-heading small{color:#788ca1;font-size:12px;font-weight:400}
+body[data-theme="template-6"] .b2b-menu-close{border:0;background:#f0f5fb;color:#385976;border-radius:7px;padding:7px 10px;cursor:pointer}
+body[data-theme="template-6"] .b2b-model-search-panel{padding:12px;background:#f6f9fd;border:1px solid #e6edf5;border-radius:10px;margin-bottom:14px}
+body[data-theme="template-6"] .b2b-model-search-panel>strong{display:block;color:#2b4560;font-size:13px}
+body[data-theme="template-6"] .b2b-model-search-panel>small{display:block;color:#6f8499;margin:3px 0 10px}
+body[data-theme="template-6"] .b2b-model-search-wrap{display:flex;align-items:center;gap:10px;color:#567089;font-size:12px}
+body[data-theme="template-6"] .b2b-model-search-wrap input{flex:1;min-width:0;max-width:340px;height:34px;border:1px solid #cad9e9;border-radius:7px;padding:7px 10px;background:#fff}
+body[data-theme="template-6"] .b2b-model-status{margin:0 0 11px;color:#6c8197;font-size:12px}
+body[data-theme="template-6"] .b2b-model-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+body[data-theme="template-6"] .b2b-model-link{display:block;border:1px solid #e4ecf4;border-radius:7px;padding:8px 9px;color:#2e526f;text-decoration:none;font-size:12px;background:#fff}
+body[data-theme="template-6"] .b2b-model-link:hover{border-color:#9bc1f2;background:#f3f8ff;color:#1768ca}
+body[data-theme="template-6"] .b2b-family-all{display:inline-block;margin-top:14px;color:#1768ca;text-decoration:none;font-size:13px;font-weight:700}
+@media(max-width:700px){body[data-theme="template-6"] .b2b-dropdown-overlay{left:0;width:calc(100vw - 28px);max-height:70vh;overflow:auto;padding:14px}body[data-theme="template-6"] .b2b-mega-layout{grid-template-columns:1fr;gap:12px}body[data-theme="template-6"] .b2b-mega-families{flex-direction:row;overflow-x:auto;padding:0 0 10px;border:0;border-bottom:1px solid #e6edf5}body[data-theme="template-6"] .b2b-family-btn{white-space:nowrap;width:auto}body[data-theme="template-6"] .b2b-model-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){body[data-theme="template-6"] .app-header .header-inner{flex-wrap:wrap;gap:10px;padding:10px 14px}body[data-theme="template-6"] .app-header .logo{flex:1 1 auto}body[data-theme="template-6"] .app-header .logo img{width:160px}body[data-theme="template-6"] .app-header .search-bar{order:3;flex:1 1 100%}body[data-theme="template-6"] .app-header .user-nav{margin-left:auto}body[data-theme="template-6"] .b2b-mobile-toggle{display:inline-flex;align-items:center;gap:8px;min-height:45px;border:0;background:transparent;color:#24405e;font-weight:700}body[data-theme="template-6"] .b2b-top-nav{display:none;flex-wrap:wrap;padding-bottom:8px}body[data-theme="template-6"] .b2b-top-nav.mobile-open{display:flex}}
+
+/* The PHP theme router names several stylesheets that are absent from the
+   source bundle. Supply their layout rules here for the storefront port. */
+body[data-theme="template-6"] .ferry-announcement__messages{display:flex;justify-content:center;gap:18px;align-items:center;min-height:34px}
+body[data-theme="template-6"] .ferry-announcement__messages span+span::before{content:"|";margin-right:18px;opacity:.55}
+body[data-theme="template-6"] .fm-catalog-page{max-width:1240px;margin-inline:auto;padding:22px 20px 64px}
+body[data-theme="template-6"] .catalog-breadcrumb{display:flex;align-items:center;gap:10px;color:#758398;font-size:13px;margin:0 0 18px}
+body[data-theme="template-6"] .catalog-breadcrumb a{color:#47607a;text-decoration:none}
+body[data-theme="template-6"] .catalog-breadcrumb a:hover{color:#226bd3}
+body[data-theme="template-6"] .catalog-price-notice{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#edf5ff;border:1px solid #dbeafa;border-radius:12px;color:#234363;padding:12px 17px;margin-bottom:18px;font-size:13px}
+body[data-theme="template-6"] .catalog-price-notice a{color:#1767cb;font-weight:700;text-decoration:none}
+body[data-theme="template-6"] .catalog-layout{display:grid;grid-template-columns:256px minmax(0,1fr);align-items:start;gap:20px}
+body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar{position:sticky;top:180px;max-height:none;overflow:visible;background:#fff;border:1px solid #e0e8f1;border-radius:14px;box-shadow:0 10px 30px #1634560b;padding:18px}
+body[data-theme="template-6"] .catalog-sidebar-heading{margin-bottom:16px}
+body[data-theme="template-6"] .catalog-sidebar-heading>span{display:block;color:#2876da;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+body[data-theme="template-6"] .catalog-sidebar-heading h2{font-size:19px;line-height:1.2;margin:5px 0 0;color:#152d46}
+body[data-theme="template-6"] .quick-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;overflow:visible;max-height:none;margin:0 0 15px;padding:0}
+body[data-theme="template-6"] .quick-category{width:auto;min-height:91px;padding:10px 7px;border-radius:10px;gap:5px;justify-content:center;box-shadow:none;font-size:12px}
+body[data-theme="template-6"] .quick-category-thumb{width:38px;height:38px;flex:none}
+body[data-theme="template-6"] .quick-category-thumb svg{width:100%;height:100%}
+body[data-theme="template-6"] .catalog-sidebar-active{padding-top:12px;border-top:1px solid #e6edf5}
+body[data-theme="template-6"] .catalog-sidebar-active button{border:1px solid #dbe5f0;border-radius:7px;background:#fff;color:#30516e;padding:7px 10px;cursor:pointer}
+body[data-theme="template-6"] .catalog-main{min-width:0;background:#fff;border:1px solid #e0e8f1;border-radius:14px;padding:18px;box-shadow:0 10px 30px #1634560b}
+body[data-theme="template-6"] .catalog-refine-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+body[data-theme="template-6"] .catalog-refine-row button{min-height:34px;padding:7px 12px;border:1px solid #dbe5ef;border-radius:8px;background:#fff;color:#31506a;font-weight:650;cursor:pointer}
+body[data-theme="template-6"] .catalog-refine-row button.active{border-color:#95b8ec;background:#edf5ff;color:#1768c7}
+body[data-theme="template-6"] .fm-results-tools{border-bottom:1px solid #e5ebf2;margin-bottom:12px;padding-bottom:12px;color:#526a82;font-size:13px}
+body[data-theme="template-6"] .fm-results-tools .view-toggle{display:flex;gap:5px}
+body[data-theme="template-6"] .fm-results-tools .view-btn{border:1px solid #dbe4ef;border-radius:7px;background:#fff;color:#466078;cursor:pointer}
+body[data-theme="template-6"] .fm-results-tools .view-btn.active{border-color:#8db5f0;color:#1768c9;background:#f1f7ff}
+body[data-theme="template-6"] .fm-results-tools select{border:1px solid #dbe4ef;border-radius:8px;background:#fff;color:#304a62}
+body[data-theme="template-6"] .lp-product-section:empty{display:none}
+body[data-theme="template-6"] .lp-product-grid .lp-product{min-width:0}
+body[data-theme="template-6"] .lp-product-slider{overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b5c5d7 transparent;scroll-snap-type:x mandatory;padding-bottom:10px}
+body[data-theme="template-6"] .lp-product-slider>.lp-product{scroll-snap-align:start}
+body[data-theme="template-6"] .ferry-main-footer{background:#fff;color:#263e56;border-top:1px solid #e3ebf3}
+body[data-theme="template-6"] .ferry-main-footer .footer-grid{display:grid;grid-template-columns:1.7fr repeat(4,minmax(0,1fr));gap:28px;padding-block:42px}
+body[data-theme="template-6"] .ferry-main-footer .footer-brand{min-width:0}
+body[data-theme="template-6"] .ferry-main-footer .footer-logo{width:180px;height:auto;filter:none;margin-bottom:15px}
+body[data-theme="template-6"] .ferry-main-footer .footer-col h4{color:#15304b;font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin:0 0 14px}
+body[data-theme="template-6"] .ferry-main-footer .footer-col p{color:#52677d;font-size:13px;line-height:1.6}
+body[data-theme="template-6"] .ferry-main-footer .footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+body[data-theme="template-6"] .ferry-main-footer .footer-links a{color:#435b72;text-decoration:none;font-size:13px}
+body[data-theme="template-6"] .ferry-main-footer .footer-links a:hover{color:#176ad2}
+body[data-theme="template-6"] .ferry-main-footer .footer-bottom{background:#0e2037;color:#d5e3f2}
+body[data-theme="template-6"] .ferry-main-footer .footer-bottom-inner{display:flex;justify-content:space-between;gap:16px}
+@media(max-width:900px){body[data-theme="template-6"] .catalog-layout{grid-template-columns:1fr}body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar{position:static;max-height:none;overflow:visible}body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar .quick-categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-height:none;overflow:visible}body[data-theme="template-6"] .fm-catalog-page .quick-category{flex:auto}body[data-theme="template-6"] .ferry-main-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-theme="template-6"] .ferry-main-footer .footer-brand{grid-column:1/-1}}
+@media(max-width:600px){body[data-theme="template-6"] .ferry-announcement__messages{gap:0}body[data-theme="template-6"] .ferry-announcement__messages span:nth-child(n+2){display:none}body[data-theme="template-6"] .fm-catalog-page{padding:16px 12px 40px}body[data-theme="template-6"] .fm-catalog-page .catalog-sidebar .quick-categories{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-theme="template-6"] .quick-category{min-height:72px;flex-direction:row;justify-content:flex-start;gap:8px;text-align:left}body[data-theme="template-6"] .quick-category-thumb{width:32px;height:32px}body[data-theme="template-6"] .ferry-main-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}body[data-theme="template-6"] .ferry-main-footer .footer-bottom-inner{flex-direction:column}}

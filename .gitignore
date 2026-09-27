@@ -1,0 +1,5 @@
+/config.php
+/storage/
+/ferry_app.sql
+*.log
+/.repo/

@@ -1,0 +1,10 @@
+{
+  "name": "Ferry Telecom Wholesale",
+  "short_name": "Ferry Telecom",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2878f0",
+  "icons": [{"src":"/assets/ferry-favicon.png","sizes":"32x32","type":"image/png"}]
+}

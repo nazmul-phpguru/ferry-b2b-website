@@ -1,0 +1,120 @@
+/* Ferry Main complete storefront layer.
+   Covers catalogue, categories, product, cart, checkout, account and CMS. */
+body[data-theme="template-6"] main{min-height:52vh}
+body[data-theme="template-6"] .breadcrumb{max-width:1180px;margin:0 auto;padding:22px 0 12px;color:#768197;font-size:12px}
+body[data-theme="template-6"] .breadcrumb a{color:#52627c;text-decoration:none}
+body[data-theme="template-6"] .breadcrumb a:hover{color:#2f6fdf}
+
+/* Catalogue and categories */
+body[data-theme="template-6"] .ferry-main-catalog{max-width:1180px;margin:0 auto;padding-bottom:70px;grid-template-columns:270px minmax(0,1fr)}
+body[data-theme="template-6"] .ferry-main-catalog>.sidebar{position:sticky;top:132px;max-height:calc(100vh - 150px);overflow:hidden}
+body[data-theme="template-6"] .ferry-main-catalog .sidebar-body{max-height:calc(100vh - 152px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#a9b9ce transparent}
+body[data-theme="template-6"] .ferry-main-catalog .sidebar-inner{padding:6px 17px 16px}
+body[data-theme="template-6"] .ferry-main-catalog .widget{padding:17px 0}
+body[data-theme="template-6"] .ferry-main-catalog .widget-title{margin:0 0 13px;padding-bottom:11px;border-bottom:1px solid #e8ecf2;font-size:14px;text-transform:uppercase;letter-spacing:.075em}
+body[data-theme="template-6"] .cat-filter-list,body[data-theme="template-6"] .attr-list,body[data-theme="template-6"] .stock-filter-list{display:grid;gap:5px}
+body[data-theme="template-6"] .cat-filter-item label,body[data-theme="template-6"] .attr-option,body[data-theme="template-6"] .stock-filter-item label{min-height:37px;padding:5px 7px;border-radius:8px;color:#364157;font-size:13px;transition:.16s ease}
+body[data-theme="template-6"] .cat-filter-item label:hover,body[data-theme="template-6"] .attr-option:hover,body[data-theme="template-6"] .stock-filter-item label:hover{background:#f2f6fc;color:#1d4f9f}
+body[data-theme="template-6"] .cat-filter-thumb{width:28px;height:28px;border:1px solid #e2e7ef;border-radius:7px;background:#f8fafc}
+body[data-theme="template-6"] .cat-filter-thumb img{width:100%;height:100%;object-fit:contain}
+body[data-theme="template-6"] .ferry-main-catalog .toolbar{position:sticky;top:113px;z-index:8;min-height:68px;padding:12px 16px}
+body[data-theme="template-6"] .result-count{font-weight:700;color:#25324a}
+body[data-theme="template-6"] .products.view-list{display:grid;gap:9px}
+body[data-theme="template-6"] .products.view-list .product{grid-template-columns:70px minmax(260px,1fr) 140px 115px 128px;column-gap:17px}
+body[data-theme="template-6"] .products.view-list .product-image{width:64px;height:64px;border-radius:9px}
+body[data-theme="template-6"] .products.view-list .product-title{font-size:14px;font-weight:700;color:#182238}
+body[data-theme="template-6"] .load-more{min-width:230px;padding:12px 28px;border:1px solid #9db2cf;border-radius:999px;background:#fff;color:#234774;box-shadow:0 10px 24px -22px #173a68}
+body[data-theme="template-6"] .load-more:hover{border-color:#2f6fdf;color:#1f5fc8;transform:translateY(-1px)}
+body[data-theme="template-6"] .cat-group{margin:20px 0 38px;padding:22px;border:1px solid #e2e7ef;border-radius:16px;background:#fff}
+body[data-theme="template-6"] .cat-grid{gap:12px}
+body[data-theme="template-6"] .cat-tile{border:1px solid #e5e9f0;border-radius:12px;background:#fafbfd;transition:.18s ease}
+body[data-theme="template-6"] .cat-tile:hover{border-color:#b8c9e2;background:#fff;box-shadow:0 18px 36px -30px #1d467d;transform:translateY(-2px)}
+
+/* Product */
+body[data-theme="template-6"] .ferry-main-product-detail{max-width:1180px;margin:8px auto 30px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(380px,.98fr);gap:44px;padding:30px;border:1px solid #e1e6ed;border-radius:18px;background:#fff;box-shadow:0 26px 55px -46px #163762}
+body[data-theme="template-6"] .ferry-main-product-detail .gallery{display:grid;grid-template-columns:74px minmax(0,1fr);gap:15px}
+body[data-theme="template-6"] .ferry-main-product-detail .main-image{grid-column:2;grid-row:1;min-height:480px;border:1px solid #e7eaf0;border-radius:14px;background:#fafbfc}
+body[data-theme="template-6"] .ferry-main-product-detail .main-image img{width:100%;height:480px;object-fit:contain;padding:24px}
+body[data-theme="template-6"] .ferry-main-product-detail .thumbs{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:9px}
+body[data-theme="template-6"] .ferry-main-product-detail .thumbs img{width:70px;height:70px;object-fit:contain;padding:5px;border:1px solid #e1e6ed;border-radius:9px;background:#fff}
+body[data-theme="template-6"] .ferry-main-product-detail .thumbs img.active{border-color:#2f6fdf;box-shadow:0 0 0 3px rgba(47,111,223,.1)}
+body[data-theme="template-6"] .ferry-main-product-detail .summary{padding:12px 4px}
+body[data-theme="template-6"] .product_title{margin:0 0 12px;color:#111b2e;font-size:clamp(26px,3vw,40px);line-height:1.1;letter-spacing:-.035em}
+body[data-theme="template-6"] .price-big{margin:26px 0 17px;font-size:30px;font-weight:800;color:#15355f}
+body[data-theme="template-6"] .qty-row{margin-top:26px;padding-top:22px;border-top:1px solid #e8ecf1}
+body[data-theme="template-6"] .pd-actions{display:flex;gap:10px;margin-top:15px}
+body[data-theme="template-6"] .pd-actions .btn{min-height:48px;padding-inline:24px}
+body[data-theme="template-6"] .tabs{max-width:1180px;margin:0 auto 34px;border:1px solid #e1e6ed;border-radius:16px;background:#fff;overflow:hidden}
+body[data-theme="template-6"] .tabs-nav{padding:0 22px;border-bottom:1px solid #e7ebf1;background:#f8fafc}
+body[data-theme="template-6"] .tabs-nav button{padding:17px 18px}
+body[data-theme="template-6"] .tab-panel{padding:26px;line-height:1.75;color:#46536a}
+
+/* Cart and checkout */
+body[data-theme="template-6"] .ferry-main-cart,body[data-theme="template-6"] .ferry-main-checkout{max-width:1180px;margin:0 auto;padding-bottom:72px}
+body[data-theme="template-6"] .checkout-head{margin:8px 0 22px}
+body[data-theme="template-6"] .checkout-head h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.04em;color:#111b2e}
+body[data-theme="template-6"] .cart-layout{grid-template-columns:minmax(0,1fr) 350px;gap:24px;align-items:start}
+body[data-theme="template-6"] .cart-panel,body[data-theme="template-6"] .cart-summary,body[data-theme="template-6"] .checkout-card,body[data-theme="template-6"] .checkout-order{border:1px solid #e0e5ed;border-radius:16px;background:#fff;box-shadow:0 20px 45px -40px #17375f}
+body[data-theme="template-6"] .cart-row{padding:18px;grid-template-columns:78px minmax(0,1fr) 125px 110px 34px}
+body[data-theme="template-6"] .cart-row__image{width:72px;height:72px;border:1px solid #e6eaf0;border-radius:10px;background:#f8fafc}
+body[data-theme="template-6"] .cart-row__name{font-size:14px;color:#152238}
+body[data-theme="template-6"] .cart-summary{position:sticky;top:132px;padding:22px}
+body[data-theme="template-6"] .cart-checkout,body[data-theme="template-6"] .checkout-place{border-radius:10px;background:#2f6fdf;box-shadow:0 16px 26px -20px #144eaa}
+body[data-theme="template-6"] .checkout-layout{grid-template-columns:minmax(0,1fr) 390px;gap:24px;align-items:start}
+body[data-theme="template-6"] .checkout-main{display:grid;gap:15px}
+body[data-theme="template-6"] .checkout-card{padding:23px}
+body[data-theme="template-6"] .checkout-card__head{margin-bottom:18px}
+body[data-theme="template-6"] .checkout-card__head h2{font-size:17px}
+body[data-theme="template-6"] .checkout-field input,body[data-theme="template-6"] .checkout-field select{min-height:48px;border:1px solid #dfe5ed;border-radius:9px;background:#fbfcfe}
+body[data-theme="template-6"] .checkout-field input:focus,body[data-theme="template-6"] .checkout-field select:focus{border-color:#6f9dec;box-shadow:0 0 0 4px rgba(47,111,223,.09)}
+body[data-theme="template-6"] .checkout-order{position:sticky;top:132px;padding:22px}
+body[data-theme="template-6"] .checkout-gateway{border:1px solid #e0e5ed;border-radius:10px;background:#fbfcfe}
+body[data-theme="template-6"] .checkout-gateway:has(input:checked){border-color:#6e9aeb;background:#f4f8ff;box-shadow:0 0 0 3px rgba(47,111,223,.08)}
+
+/* Account */
+body[data-theme="template-6"] .ferry-main-account{max-width:1180px;padding-bottom:70px}
+body[data-theme="template-6"] .myaccount{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px;align-items:start}
+body[data-theme="template-6"] .myaccount-nav{position:sticky;top:132px;padding:10px;border:1px solid #e0e6ed;border-radius:14px;background:#f8fafc}
+body[data-theme="template-6"] .myaccount-nav li{margin:2px 0}
+body[data-theme="template-6"] .myaccount-nav a{display:block;padding:11px 13px;border-radius:8px;color:#41516b;font-size:13px;font-weight:650}
+body[data-theme="template-6"] .myaccount-nav li.is-active a,body[data-theme="template-6"] .myaccount-nav a:hover{background:#fff;color:#205fca;box-shadow:0 8px 18px -16px #1c497f}
+body[data-theme="template-6"] .myaccount-content{min-height:460px;padding:28px;border:1px solid #e0e6ed;border-radius:16px;background:#fff;box-shadow:0 22px 46px -42px #17375e}
+body[data-theme="template-6"] .acct-cards{gap:12px}
+body[data-theme="template-6"] .acct-card{border:1px solid #e1e7ee;border-radius:12px;background:#f9fbfd}
+body[data-theme="template-6"] .acct-form input,body[data-theme="template-6"] .acct-form select,body[data-theme="template-6"] .acct-form textarea{border:1px solid #dfe5ed;border-radius:9px;background:#fbfcfe}
+
+/* CMS, posts and legal content */
+body[data-theme="template-6"] .cms-public{max-width:1180px;padding-bottom:76px}
+body[data-theme="template-6"] .cms-public>header{margin:12px 0 28px;padding:34px clamp(22px,5vw,58px);border:1px solid #e0e6ee;border-radius:18px;background:linear-gradient(135deg,#f6f9fd,#eef4fc 60%,#fff)}
+body[data-theme="template-6"] .cms-public>header h1{margin:0;font-size:clamp(32px,5vw,54px);letter-spacing:-.045em;color:#111b2e}
+body[data-theme="template-6"] .cms-public-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+body[data-theme="template-6"] .cms-public-card{overflow:hidden;border:1px solid #e1e6ed;border-radius:14px;background:#fff;box-shadow:0 18px 38px -34px #17385f;transition:.2s ease}
+body[data-theme="template-6"] .cms-public-card:hover{transform:translateY(-3px);box-shadow:0 24px 46px -34px #17385f}
+body[data-theme="template-6"] .cms-public-card img{aspect-ratio:16/9;object-fit:cover}
+body[data-theme="template-6"] .cms-public-card>div{padding:20px}
+body[data-theme="template-6"] .cms-public-single{max-width:940px}
+body[data-theme="template-6"] .cms-public-single>header{text-align:left}
+body[data-theme="template-6"] .cms-public-content{max-width:780px;margin:0 auto;padding:36px clamp(22px,5vw,58px);border:1px solid #e1e6ed;border-radius:16px;background:#fff;color:#3b485e;font-size:16px;line-height:1.8}
+body[data-theme="template-6"] .cms-public-content h2,body[data-theme="template-6"] .cms-public-content h3{color:#162138;letter-spacing:-.02em}
+
+@media(max-width:900px){
+ body[data-theme="template-6"] .ferry-main-catalog{grid-template-columns:1fr}
+ body[data-theme="template-6"] .ferry-main-catalog>.sidebar,body[data-theme="template-6"] .ferry-main-catalog .toolbar,body[data-theme="template-6"] .cart-summary,body[data-theme="template-6"] .checkout-order,body[data-theme="template-6"] .myaccount-nav{position:static}
+ body[data-theme="template-6"] .ferry-main-product-detail{grid-template-columns:1fr;gap:24px}
+ body[data-theme="template-6"] .cart-layout,body[data-theme="template-6"] .checkout-layout{grid-template-columns:1fr}
+ body[data-theme="template-6"] .myaccount{grid-template-columns:1fr}
+ body[data-theme="template-6"] .myaccount-nav ul{display:flex;gap:5px;overflow-x:auto}
+ body[data-theme="template-6"] .myaccount-nav li{flex:none}
+ body[data-theme="template-6"] .cms-public-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ body[data-theme="template-6"] .breadcrumb{padding-inline:16px}
+ body[data-theme="template-6"] .ferry-main-product-detail{margin:0 12px 22px;padding:14px;border-radius:13px}
+ body[data-theme="template-6"] .ferry-main-product-detail .gallery{display:block}
+ body[data-theme="template-6"] .ferry-main-product-detail .main-image,body[data-theme="template-6"] .ferry-main-product-detail .main-image img{min-height:300px;height:300px}
+ body[data-theme="template-6"] .ferry-main-product-detail .thumbs{margin-top:9px;flex-direction:row;overflow-x:auto}
+ body[data-theme="template-6"] .cart-row{grid-template-columns:60px minmax(0,1fr) 30px}
+ body[data-theme="template-6"] .cart-row__quantity,body[data-theme="template-6"] .cart-row__total{grid-column:2}
+ body[data-theme="template-6"] .checkout-card,body[data-theme="template-6"] .checkout-order,body[data-theme="template-6"] .myaccount-content{padding:16px}
+ body[data-theme="template-6"] .cms-public-grid{grid-template-columns:1fr}
+}

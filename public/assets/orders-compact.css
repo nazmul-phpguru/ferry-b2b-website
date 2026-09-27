@@ -1,0 +1,116 @@
+.wp-orders-list{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;font-size:12px}
+.wp-orders-list>.wp-list-top,.wp-orders-list>.wp-status-links,.wp-orders-list>form[method=post],.wp-orders-list>.pagination{grid-column:1/-1}
+.wp-orders-list .wp-list-top h1{font-size:21px}
+.wp-orders-list .wp-status-links{gap:0;margin:9px 0 12px}
+.wp-orders-list .wp-status-links a{font-size:12px;padding:0 7px}
+.wp-orders-list .orders-filter-form{grid-column:1;grid-row:3;display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:0 0 7px;min-width:0}
+.wp-orders-list .orders-search-form{grid-column:2;grid-row:3;align-self:start;margin:0 0 7px;gap:5px}
+.wp-orders-list .orders-filter-form select{display:inline-block;width:145px;min-width:0;height:29px;margin:0;padding:3px 7px;font-size:12px}
+.wp-orders-list .orders-filter-form select#orders-role{width:165px}
+.wp-orders-list .orders-filter-form select#orders-origin{width:145px}
+.wp-orders-list .orders-search-form input{display:inline-block;width:190px;height:29px;min-width:0;margin:0;padding:3px 7px;font-size:12px}
+.wp-orders-list .orders-search-form button,.wp-orders-list .orders-filter-form button,.wp-orders-list .orders-bulk button{height:29px;padding:3px 9px;font-size:12px;white-space:nowrap}
+.wp-orders-list .orders-table-tools{margin:3px 0 6px;font-size:12px}
+.wp-orders-list .orders-bulk select{display:inline-block;width:145px;height:29px;margin:0;padding:3px 7px;font-size:12px}
+.wp-orders-list .orders-table th,.wp-orders-list .orders-table td{padding:7px 7px;font-size:12px;line-height:1.3}
+.wp-orders-list .orders-table th{font-size:12px}
+.wp-orders-list .order-status{padding:3px 6px;font-size:11px}
+.wp-orders-list .order-actions a{width:27px;height:25px;font-size:10px}
+.wp-orders-list .order-actions a:first-child{font-size:16px}
+.wp-orders-list .order-date small,.wp-orders-list .order-id-cell small{font-size:11px;margin-top:1px}
+@media(max-width:1100px){.wp-orders-list{grid-template-columns:1fr}.wp-orders-list .orders-filter-form,.wp-orders-list .orders-search-form{grid-column:1;grid-row:auto;justify-content:flex-start}.wp-orders-list .orders-search-form{grid-row:3}.wp-orders-list .orders-filter-form{grid-row:4}.wp-orders-list .orders-filter-form select{max-width:calc(50vw - 40px)}}
+@media(max-width:600px){.wp-orders-list .orders-filter-form select{width:calc(50% - 4px);max-width:none}.wp-orders-list .orders-filter-form select#orders-role,.wp-orders-list .orders-filter-form select#orders-origin{width:calc(50% - 4px)}.wp-orders-list .orders-search-form input{flex:1}}
+.wp-orders-list .wp-status-links{grid-column:1;grid-row:2;align-self:center;margin:10px 0}
+.wp-orders-list .orders-search-form{grid-column:2;grid-row:2;align-self:center;margin:6px 0}
+.wp-orders-list .orders-controls{grid-column:1/-1;grid-row:3;display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:7px 0 0}
+.wp-orders-list .orders-controls .orders-bulk{display:flex;align-items:center;gap:5px}
+.wp-orders-list .orders-controls .orders-filter-form{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin:0}
+.wp-orders-list .orders-list-meta{grid-column:1/-1;grid-row:4;display:flex;justify-content:flex-end;align-items:center;gap:5px;margin:5px 0 7px;color:#50575e;font-size:12px}
+.wp-orders-list .orders-list-meta a{display:inline-grid;place-items:center;width:26px;height:25px;border:1px solid #c3c4c7;border-radius:3px;background:#fff;font-size:16px}
+.wp-orders-list form#orders-bulk-form{grid-column:1/-1;grid-row:5}
+.wp-orders-list .orders-table{min-width:1120px}
+.wp-orders-list .orders-table th:nth-child(2){width:165px}
+.wp-orders-list .orders-table th:nth-child(3){width:90px}
+.wp-orders-list .orders-table th:nth-child(4){width:52px}
+.wp-orders-list .orders-table th:nth-child(5),.wp-orders-list .orders-table th:nth-child(6){width:170px}
+.wp-orders-list .orders-table th:nth-child(7){width:86px}
+.wp-orders-list .orders-table th:nth-child(8){width:106px}
+.wp-orders-list .orders-table th:nth-child(9){width:92px}
+.wp-orders-list .orders-table th:nth-child(10){width:95px}
+.wp-orders-list .orders-table th:nth-child(11){width:65px}
+.wp-orders-list .orders-table th,.wp-orders-list .orders-table td{vertical-align:middle;padding:7px 8px}
+.wp-orders-list .order-id-cell{white-space:nowrap}
+.wp-orders-list .order-invoice-inline{font-size:11px;color:#646970}
+.wp-orders-list .order-status{display:inline-grid;place-items:center;width:23px;height:23px;padding:0;border-radius:50%;color:#fff;background:#aeb4ba}
+.wp-orders-list .order-status-dot{display:none}
+.wp-orders-list .order-status-symbol{font-size:17px;font-weight:700;line-height:1}
+.wp-orders-list .order-status-processing,.wp-orders-list .order-status-on-hold,.wp-orders-list .order-status-awaiting-payment,.wp-orders-list .order-status-pending{background:#e4bd36;color:#fff}
+.wp-orders-list .order-status-paid,.wp-orders-list .order-status-completed{background:#52c745;color:#fff}
+.wp-orders-list .order-status-failed,.wp-orders-list .order-status-cancelled,.wp-orders-list .order-status-refunded{background:#abb1b7;color:#fff}
+.wp-orders-list .order-actions a{font-size:16px;color:#3163b8}
+.wp-orders-list .order-actions a:first-child{font-size:14px;color:#667b98}
+.wp-orders-list .order-tools a:first-child{font-size:16px;color:#3163b8}
+.wp-orders-list .order-tools .order-quick-status{display:inline-grid;place-items:center;flex:none;width:27px;height:25px;margin:0;padding:0;border:1px solid #c3c4c7;border-radius:3px;background:#fff;color:#667b98;font:700 16px/1 Arial,sans-serif;cursor:pointer}
+.wp-orders-list .order-tools .order-quick-status:hover,.wp-orders-list .order-tools .order-quick-status:focus-visible{border-color:#2271b1;background:#f0f6fc;color:#2271b1}
+@media(max-width:1150px){.wp-orders-list .wp-status-links{grid-column:1/-1;grid-row:2}.wp-orders-list .orders-search-form{grid-column:1/-1;grid-row:3;justify-self:end}.wp-orders-list .orders-controls{grid-row:4}.wp-orders-list .orders-list-meta{grid-row:5}.wp-orders-list form#orders-bulk-form{grid-row:6}}
+.wp-orders-list .order-row-actions button{display:inline-grid;place-items:center;width:27px;height:25px;margin:0;padding:0;border:1px solid #c3c4c7;border-radius:3px;background:#fff;color:#3163b8;font-size:17px;line-height:1}
+.wp-orders-list .order-row-actions button:hover,.wp-orders-list .order-row-actions button:focus-visible{border-color:#2271b1;background:#f0f6fc}
+.wp-orders-list .order-row-actions a:first-child{font-size:16px;color:#3163b8}
+.wp-orders-list .orders-table th:last-child{width:66px}
+.wp-orders-list .orders-filter-form input[type=date]{display:inline-block;width:142px;min-width:0;height:29px;margin:0;padding:3px 6px;font-size:12px}
+.wp-orders-list .orders-filter-form select#orders-payment{width:145px}
+.wp-orders-list .orders-filter-form select#orders-customer{width:175px}
+.wp-orders-list .orders-filter-form select#orders-shipping{width:165px}
+.wp-orders-list .orders-filter-form select#orders-sort{width:105px}
+
+/* Compact, consistent SVG controls. Symbols are embedded once in the page. */
+.wp-orders-list .order-icon-sprite{position:absolute;width:0;height:0;overflow:hidden}
+.wp-orders-list .order-icon{display:block;width:16px;height:16px;flex:none}
+.wp-orders-list .order-status .order-icon{width:14px;height:14px;stroke-width:2.8}
+.wp-orders-list .order-status-symbol{display:grid;place-items:center}
+.wp-orders-list .order-address-caret .order-icon{width:14px;height:14px;stroke-width:2}
+.wp-orders-list .order-actions a,.wp-orders-list .order-row-actions button,.wp-orders-list .order-tools .order-quick-status{transition:background-color .15s,border-color .15s,color .15s}
+.wp-orders-list .order-actions a .order-icon,.wp-orders-list .order-actions button .order-icon{width:16px;height:16px}
+.wp-orders-list .order-tools a[href*="type=invoice"]{color:#bb4672;border-color:#e5b5ca}
+.wp-orders-list .order-tools a[href*="type=invoice"]:hover,.wp-orders-list .order-tools a[href*="type=invoice"]:focus-visible{background:#fff1f6;border-color:#bb4672}
+.wp-orders-list .order-tools a[href*="type=packing-slip"]{color:#7654ad;border-color:#d0c1e7}
+.wp-orders-list .order-tools a[href*="type=packing-slip"]:hover,.wp-orders-list .order-tools a[href*="type=packing-slip"]:focus-visible{background:#f7f2ff;border-color:#7654ad}
+.wp-orders-list .order-row-actions a{color:#139e9b}
+.wp-orders-list .order-row-actions a:hover,.wp-orders-list .order-row-actions a:focus-visible{color:#087e7b;border-color:#139e9b;background:#eaf8f7}
+.wp-orders-list .order-row-actions button{color:#657aa6}
+.wp-orders-list .order-row-actions button:hover,.wp-orders-list .order-row-actions button:focus-visible{color:#344f87;border-color:#657aa6;background:#f1f5ff}
+.wp-orders-list .order-tools .order-quick-status{color:#436bb6}
+.wp-orders-list .order-tools .order-quick-status .order-icon{stroke-width:2.6}
+.wp-orders-list .orders-list-meta a .order-icon{width:14px;height:14px}
+.wp-orders-list .wp-list-screen summary .order-icon{width:17px;height:17px;margin:auto}
+.wp-orders-list .orders-table{width:100%;min-width:1154px}
+.wp-orders-list .orders-table th,.wp-orders-list .orders-table td{font-size:13px;line-height:1.35;padding:8px 6px}
+.wp-orders-list .orders-table th:first-child,.wp-orders-list .orders-table td:first-child{width:38px;text-align:center}
+.wp-orders-list .orders-table th:nth-child(2){width:150px}
+.wp-orders-list .orders-table th:nth-child(3){width:95px}
+.wp-orders-list .orders-table th:nth-child(4){width:42px}
+.wp-orders-list .orders-table th:nth-child(5),.wp-orders-list .orders-table th:nth-child(6){width:155px}
+.wp-orders-list .orders-table th:nth-child(7){width:95px}
+.wp-orders-list .orders-table th:nth-child(8){width:100px}
+.wp-orders-list .orders-table th:nth-child(9){width:95px}
+.wp-orders-list .orders-table th:nth-child(10){width:105px}
+.wp-orders-list .orders-table th:nth-child(11){width:55px}
+.wp-orders-list .orders-table th:last-child{width:69px}
+.wp-orders-list .order-status{width:18px;height:18px}
+.wp-orders-list .order-status .order-icon{width:11px;height:11px;stroke-width:2.5}
+.wp-orders-list .order-invoice-inline{font-size:12px}
+.wp-orders-list .order-pdf-button{overflow:visible}
+.wp-orders-list .order-actions a .order-pdf-check{position:absolute;left:50%;top:50%;right:auto;bottom:auto;display:grid;place-items:center;width:12px;height:12px;transform:translate(-50%,-50%);border:0;border-radius:0;background:transparent;color:#25a343;box-shadow:none}
+.wp-orders-list .order-pdf-check .order-icon{width:11px;height:11px;stroke-width:3.3}
+.wp-orders-list .orders-table th:nth-child(2){width:130px}
+.wp-orders-list .orders-table th:nth-child(3){width:90px}
+.wp-orders-list .orders-table th:nth-child(4){width:58px}
+.wp-orders-list .orders-table th:nth-child(5),.wp-orders-list .orders-table th:nth-child(6){width:145px}
+.wp-orders-list .orders-table th:nth-child(7){width:90px}
+.wp-orders-list .orders-table th:nth-child(9){width:115px}
+.wp-orders-list .orders-table th:nth-child(11){width:70px}
+.wp-orders-list .orders-table th{white-space:nowrap}
+.wp-orders-list .orders-table td[data-post-col="origin"]{white-space:nowrap}
+.wp-orders-list .orders-controls .orders-bulk select{width:135px}
+@media(max-width:600px){.wp-orders-list .orders-filter-form input[type=date],.wp-orders-list .orders-filter-form select#orders-payment,.wp-orders-list .orders-filter-form select#orders-customer,.wp-orders-list .orders-filter-form select#orders-shipping,.wp-orders-list .orders-filter-form select#orders-sort{width:calc(50% - 4px)}}
+.wp-orders-list .orders-export{display:inline-block;height:29px;padding:5px 9px;border:1px solid #2271b1;border-radius:3px;background:#fff;color:#2271b1;font-size:12px;white-space:nowrap}
