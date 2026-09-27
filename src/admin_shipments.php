@@ -9,7 +9,7 @@ function tracking_items(int $orderId): array {
 function admin_shipments(): void {
     $orders=rows("SELECT p.ID,p.post_date,p.post_status,m.meta_value tracking FROM wp_posts p JOIN wp_postmeta m ON m.post_id=p.ID AND m.meta_key='_wc_shipment_tracking_items' WHERE p.post_type='shop_order' ORDER BY p.ID DESC LIMIT 100");
     admin_layout('Shipment Tracking',static function() use($orders){
-        ?><div class="heading"><div><div class="eyebrow">COMMERCE</div><h1>Shipment Tracking</h1><p>Latest 100 orders with tracking</p></div></div>
+        ?><div class="heading"><div><div class="eyebrow">E-COMMERCE</div><h1>Shipment Tracking</h1><p>Latest 100 orders with tracking</p></div></div>
         <form class="product-filters" action="<?=h(path('/admin/shipment'))?>" method="get"><label>Order number<input name="order" type="number" min="1" required></label><button class="secondary">Open order tracking</button></form>
         <div class="panel table-wrap"><table><thead><tr><th>Order</th><th>Date</th><th>Status</th><th>Provider</th><th>Tracking number</th><th>Action</th></tr></thead><tbody><?php foreach($orders as $order): $items=@unserialize($order['tracking'],['allowed_classes'=>false]); if(!is_array($items))$items=[]; foreach($items as $item): if(!is_array($item))continue; ?><tr><td><a href="<?=h(path('/admin/order?id='.$order['ID']))?>">#<?=h($order['ID'])?></a></td><td><?=h($order['post_date'])?></td><td><?=h($order['post_status'])?></td><td><?=h(($item['custom_tracking_provider'] ?? '') ?: ($item['tracking_provider'] ?? ''))?></td><td><?=h($item['tracking_number'] ?? '')?></td><td><a href="<?=h(path('/admin/shipment?order='.$order['ID']))?>">Edit</a></td></tr><?php endforeach; endforeach; ?></tbody></table></div><?php
     });

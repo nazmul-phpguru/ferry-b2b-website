@@ -32,6 +32,15 @@ $uri=parse_url($_SERVER['REQUEST_URI'] ?? '/',PHP_URL_PATH) ?: '/';
 $base=rtrim((string)cfg('base_path',''),'/');
 if ($base!=='' && str_starts_with($uri,$base)) $uri=substr($uri,strlen($base)) ?: '/';
 $method=$_SERVER['REQUEST_METHOD'] ?? 'GET';
+if ($uri==='/admin/woocommerce' || str_starts_with($uri,'/admin/woocommerce/')) {
+    $newUri='/admin/e-commerce'.substr($uri,strlen('/admin/woocommerce'));
+    if ($method==='GET') {
+        $queryString=(string)($_SERVER['QUERY_STRING'] ?? '');
+        header('Location: '.path($newUri).($queryString!==''?'?'.$queryString:''),true,301);
+        exit;
+    }
+    $uri=$newUri;
+}
 if($method==='GET' && $uri==='/shop'){
     $legacySearch=trim((string)($_GET['q']??$_GET['s']??''));
     if($legacySearch!==''){header('Location: '.path('/shop/'.slug($legacySearch)),true,301);exit;}
@@ -65,15 +74,15 @@ try {
             case '/admin/comment': require_admin(); save_admin_comment();
             case '/admin/comments/reply': require_admin(); reply_admin_comment();
             case '/admin/coupon': require_admin(); save_woo_coupon();
-            case '/admin/woocommerce/settings': require_admin(); save_woo_settings();
-            case '/admin/woocommerce/settings/tab': require_admin(); save_store_settings_tab();
-            case '/admin/woocommerce/api-key': require_admin(); save_woo_api_key();
-            case '/admin/woocommerce/webhook': require_admin(); save_woo_webhook();
-            case '/admin/woocommerce/visibility': require_admin(); save_store_visibility();
-            case '/admin/woocommerce/payment': require_admin(); save_store_payment();
-            case '/admin/woocommerce/zone': require_admin(); save_store_zone();
-            case '/admin/woocommerce/method': require_admin(); save_store_method();
-            case '/admin/woocommerce/tax-rate': require_admin(); save_store_tax_rate();
+            case '/admin/e-commerce/settings': require_admin(); save_woo_settings();
+            case '/admin/e-commerce/settings/tab': require_admin(); save_store_settings_tab();
+            case '/admin/e-commerce/api-key': require_admin(); save_woo_api_key();
+            case '/admin/e-commerce/webhook': require_admin(); save_woo_webhook();
+            case '/admin/e-commerce/visibility': require_admin(); save_store_visibility();
+            case '/admin/e-commerce/payment': require_admin(); save_store_payment();
+            case '/admin/e-commerce/zone': require_admin(); save_store_zone();
+            case '/admin/e-commerce/method': require_admin(); save_store_method();
+            case '/admin/e-commerce/tax-rate': require_admin(); save_store_tax_rate();
             case '/admin/orders/bulk': require_admin(); bulk_woo_orders();
             case '/admin/updates/connect': require_admin(); save_github_update_connection();
             case '/admin/updates/check': require_admin(); check_github_update_connection();
@@ -128,21 +137,21 @@ try {
         case '/admin/page/new': admin_wp_page(); break;
         case '/admin/page/preview': admin_wp_page_preview((int)($_GET['id'] ?? 0)); break;
         case '/admin/comments': admin_comments(); break;
-        case '/admin/woocommerce': admin_woocommerce_home(); break;
-        case '/admin/woocommerce/settings': admin_store_settings_tab((string)($_GET['tab']??'general')); break;
-        case '/admin/woocommerce/api-keys': admin_woo_api_keys(); break;
-        case '/admin/woocommerce/api-key': admin_woo_api_key(); break;
-        case '/admin/woocommerce/webhooks': admin_woo_webhooks(); break;
-        case '/admin/woocommerce/webhook': admin_woo_webhook(); break;
-        case '/admin/woocommerce/order-statuses': admin_store_order_statuses(); break;
-        case '/admin/woocommerce/payments': admin_store_payments(); break;
-        case '/admin/woocommerce/payment': admin_store_payment(); break;
-        case '/admin/woocommerce/shipping': admin_store_shipping(); break;
-        case '/admin/woocommerce/shipping-classes': admin_store_shipping_classes(); break;
-        case '/admin/woocommerce/zone': admin_store_zone(); break;
-        case '/admin/woocommerce/method': admin_store_method(); break;
-        case '/admin/woocommerce/tax': admin_store_taxes(); break;
-        case '/admin/woocommerce/tax-rate': admin_store_tax_rate(); break;
+        case '/admin/e-commerce': admin_woocommerce_home(); break;
+        case '/admin/e-commerce/settings': admin_store_settings_tab((string)($_GET['tab']??'general')); break;
+        case '/admin/e-commerce/api-keys': admin_woo_api_keys(); break;
+        case '/admin/e-commerce/api-key': admin_woo_api_key(); break;
+        case '/admin/e-commerce/webhooks': admin_woo_webhooks(); break;
+        case '/admin/e-commerce/webhook': admin_woo_webhook(); break;
+        case '/admin/e-commerce/order-statuses': admin_store_order_statuses(); break;
+        case '/admin/e-commerce/payments': admin_store_payments(); break;
+        case '/admin/e-commerce/payment': admin_store_payment(); break;
+        case '/admin/e-commerce/shipping': admin_store_shipping(); break;
+        case '/admin/e-commerce/shipping-classes': admin_store_shipping_classes(); break;
+        case '/admin/e-commerce/zone': admin_store_zone(); break;
+        case '/admin/e-commerce/method': admin_store_method(); break;
+        case '/admin/e-commerce/tax': admin_store_taxes(); break;
+        case '/admin/e-commerce/tax-rate': admin_store_tax_rate(); break;
         case '/admin/coupon': admin_woo_coupon((int)($_GET['id'] ?? 0)); break;
         case '/admin/coupon/new': admin_woo_coupon(); break;
         case '/admin/comment': admin_comment((int)($_GET['id'] ?? 0)); break;

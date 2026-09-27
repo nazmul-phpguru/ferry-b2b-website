@@ -100,5 +100,5 @@ function admin_wholesale(): void {
 }
 function admin_reports(): void {
     $statuses=rows("SELECT post_status,COUNT(*) n FROM wp_posts WHERE post_type='shop_order' GROUP BY post_status ORDER BY n DESC");
-    admin_layout('Reports',static function() use($statuses){ ?><div class="heading"><div><div class="eyebrow">COMMERCE</div><h1>Order report</h1><p>Order counts by status</p></div></div><div class="panel table-wrap"><table><thead><tr><th>Status</th><th>Orders</th></tr></thead><tbody><?php foreach($statuses as $status): ?><tr><td><?=h($status['post_status'])?></td><td><?=h($status['n'])?></td></tr><?php endforeach; ?></tbody></table></div><?php });
+    admin_layout('Reports',static function() use($statuses){ ?><div class="heading"><div><div class="eyebrow">E-COMMERCE</div><h1>Order report</h1><p>Order counts by status</p></div></div><div class="panel table-wrap"><table><thead><tr><th>Status</th><th>Orders</th></tr></thead><tbody><?php foreach($statuses as $status): ?><tr><td><?=h($status['post_status'])?></td><td><?=h($status['n'])?></td></tr><?php endforeach; ?></tbody></table></div><?php });
 }
